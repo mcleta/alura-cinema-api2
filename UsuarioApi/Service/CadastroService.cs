@@ -17,7 +17,7 @@ namespace UsuarioApi.Service
             _mapper = mapper;
             _userManager = userManager;
         }
-
+ 
         public Result UserCreate(CreateUserDto createDto)
         {
             User user = _mapper.Map<User>(createDto);
