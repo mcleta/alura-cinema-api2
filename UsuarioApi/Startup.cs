@@ -32,11 +32,12 @@ namespace UsuarioApi
                 .AddEntityFrameworkStores<UserDbContext>();
 
             services.AddControllers();
-            
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<CadastroService, CadastroService>();
+            services.AddScoped<TokenService, TokenService>();
             services.AddScoped<LoginService, LoginService>();
+            services.AddScoped<LogoutService, LogoutService>();
 
 
         }
