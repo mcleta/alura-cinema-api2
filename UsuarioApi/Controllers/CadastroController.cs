@@ -26,8 +26,8 @@ namespace UsuarioApi.Controllers
             return Ok(res.Successes);
         }
 
-        [HttpPost("/active")]
-        public IActionResult UserActive(UserActiveRequest req)
+        [HttpGet("/active")]
+        public IActionResult UserActive([FromQuery] UserActiveRequest req)
         {
             Result res = _cadastroService.UserActive(req);
 
